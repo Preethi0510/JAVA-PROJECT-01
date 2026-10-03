@@ -1,0 +1,29 @@
+package project.hospitalmanagement;
+import java.time.LocalDate;
+public class Appointment {
+    private Patient patient;
+    private Doctor doctor;
+    private LocalDate date;
+    private String time;
+    public Appointment(Patient patient,Doctor doctor,LocalDate date,String time) {
+        this.patient=patient;
+        this.doctor=doctor;
+        this.date=date;
+        this.time=time;
+    }
+    public Patient getPatient() {
+        return patient;
+    }
+    public Doctor getDoctor() {
+        return doctor;
+    }
+    public LocalDate getDate() {
+        return date;
+    }
+    public String getTime() {
+        return time;
+    }
+    public String toString() {
+        return "Patient: "+patient.getName()+" | Doctor: Dr."+doctor.getName()+" | Date: "+date+" | Time: "+time;
+    }
+}
